@@ -10,6 +10,7 @@ MCU = atmega32a
 #   ATmega32A    bootloadHID
 #   ATmega328P   USBasp
 BOOTLOADER = bootloadHID
+BOOTLOADER_SIZE = 2048
 
 # build options
 BOOTMAGIC_ENABLE = full

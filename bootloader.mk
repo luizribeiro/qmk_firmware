@@ -82,7 +82,9 @@ ifeq ($(strip $(BOOTLOADER)), caterina)
 endif
 ifeq ($(strip $(BOOTLOADER)), bootloadHID)
     OPT_DEFS += -DBOOTLOADER_BOOTLOADHID
-    BOOTLOADER_SIZE = 4096
+    ifndef BOOTLOADER_SIZE
+        BOOTLOADER_SIZE = 4096
+    endif
 endif
 ifeq ($(strip $(BOOTLOADER)), USBasp)
     OPT_DEFS += -DBOOTLOADER_USBASP
